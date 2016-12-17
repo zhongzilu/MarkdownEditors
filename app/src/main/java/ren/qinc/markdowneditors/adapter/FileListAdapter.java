@@ -148,12 +148,12 @@ public class FileListAdapter extends RecyclerView.Adapter<FileListAdapter.FileVi
 
         if (mOnItemClickLitener != null) {
             holder.itemView.setOnClickListener(v -> {
-                int pos = holder.getAdapterPosition();
+                int pos = holder.getLayoutPosition();
                 mOnItemClickLitener.onItemClick(holder.name, pos);
             });
 
             holder.itemView.setOnLongClickListener(v -> {
-                int pos = holder.getAdapterPosition();
+                int pos = holder.getLayoutPosition();
                 mOnItemClickLitener.onItemLongClick(holder.itemView, pos);
                 return !isEditMode;
             });
